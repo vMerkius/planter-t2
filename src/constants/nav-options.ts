@@ -5,11 +5,11 @@ type NavOption = {
 
 export const navOptions: NavOption[] = [
   {
-    name: "About us",
+    name: "About Us",
     link: "/about",
   },
   {
-    name: "Contact us",
+    name: "Contact Us",
     link: "/contact",
   },
   {

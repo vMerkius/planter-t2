@@ -16,7 +16,6 @@ function App() {
           <Route path="*" element={<WorkInProgress />} />
         </Route>
       </Routes>
-      <HomePage />
     </Router>
   );
 }
