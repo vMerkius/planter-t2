@@ -11,7 +11,7 @@ const GreenButton: React.FC<GreenButtonProps> = ({
   return (
     <button
       {...props}
-      className={`bg-[#3A6150] flex items-center justify-center text-white ${className}`}
+      className={`bg-[#3A6150] flex items-center justify-center text-white hover:cursor-pointer ${className}`}
     >
       {children}
     </button>
