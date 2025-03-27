@@ -7,13 +7,14 @@ import arrowDownIcon from "/assets/images/arrow-down.svg";
 import VerticalLine from "../components/UI/vertical-line";
 import { useState } from "react";
 import Input from "../components/UI/input";
+import GreenButton from "../components/UI/btn-green";
 
 const Header = () => {
   const [search, setSearch] = useState("");
 
   const navigate = useNavigate();
   return (
-    <header className="flex justify-between items-center bg-white p-4">
+    <header className="flex justify-between items-center bg-white px-[4rem] py-[1rem]">
       <div className="flex gap-40">
         <img
           src={logoIcon}
@@ -52,9 +53,9 @@ const Header = () => {
           placehorder="Search this site"
           className="w-[22rem]"
         />
-        <button className="bg-[#3A6150] h-full w-11 flex items-center justify-center">
+        <GreenButton className="h-full w-11">
           <img src={searchIcon} alt="Logo" className="h-8 w-8 cursor-pointer" />
-        </button>
+        </GreenButton>
       </div>
     </header>
   );
