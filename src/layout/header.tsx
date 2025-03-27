@@ -5,7 +5,7 @@ import searchIcon from "/assets/images/search.svg";
 import arrowDownIcon from "/assets/images/arrow-down.svg";
 
 import VerticalLine from "../components/UI/vertical-line";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import Input from "../components/UI/input";
 import GreenButton from "../components/UI/btn-green";
 
@@ -28,12 +28,12 @@ const Header = () => {
           <ul className="flex text-[#111] justify-center items-center gap-3">
             {navOptions.map((option) => {
               return (
-                <>
-                  <li key={option.name} className="">
+                <Fragment key={option.name}>
+                  <li className="">
                     <Link to={option.link}>{option.name}</Link>
                   </li>
                   <VerticalLine />
-                </>
+                </Fragment>
               );
             })}
             <li>

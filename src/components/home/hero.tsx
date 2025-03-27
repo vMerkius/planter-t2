@@ -3,7 +3,7 @@ import heroImg from "/assets/images/hero.png";
 
 const Hero = () => {
   return (
-    <section className="flex my-10 items-center">
+    <section className="flex my-10 items-center px-[4rem]">
       <div className="text-[#3A6150] flex flex-col gap-6 justify-start items-start flex-1">
         <h1 className="text-4xl font-bold">Lorem ipsum dolor sit amet</h1>
         <div className="flex flex-col gap-2">
@@ -15,7 +15,7 @@ const Hero = () => {
             molestiae necessitatibus!
           </p>
         </div>
-        <GreenButton className="py-2 px-11 inline-block">
+        <GreenButton className="py-2 px-11 inline-block rounded-sm">
           <span>Buy now</span>
         </GreenButton>
       </div>
