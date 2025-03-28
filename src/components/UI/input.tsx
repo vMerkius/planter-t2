@@ -1,25 +1,14 @@
 type InputProps = {
-  type: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  placehorder?: string;
+  id: string;
   className?: string;
-};
+} & React.InputHTMLAttributes<HTMLInputElement>;
 
-const Input: React.FC<InputProps> = ({
-  type,
-  value,
-  onChange,
-  placehorder,
-  className = "",
-}) => {
+const Input: React.FC<InputProps> = ({ id, className = "", ...props }) => {
   return (
     <input
-      type={type}
-      value={value}
-      onChange={onChange}
-      className={`border-[#3A6150] border-2 p-2 h-full ${className}`}
-      placeholder={placehorder}
+      id={id}
+      className={`border-1 p-2 h-full focus:outline-[#3A6150] focus:border-2 ${className}`}
+      {...props}
     />
   );
 };

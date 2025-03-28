@@ -47,11 +47,12 @@ const Header = () => {
       </div>
       <div className="flex items-center justify-center h-11">
         <Input
+          id="search"
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placehorder="Search this site"
-          className="w-[22rem]"
+          placeholder="Search this site"
+          className="w-[22rem] border-[#3A6150] border-2 focus:outline-[#4d61d5]"
         />
         <GreenButton className="h-full w-11">
           <img src={searchIcon} alt="Logo" className="h-8 w-8 cursor-pointer" />
