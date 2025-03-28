@@ -33,7 +33,9 @@ const Hero = () => {
         src={heroImg}
         alt=""
         aria-hidden="true"
-        className="aspect-square max-w-[37.5rem] h-auto object-contain"
+        width={600}
+        height={600}
+        className="w-[37.5rem] h-auto object-contain"
       />
     </section>
   );
