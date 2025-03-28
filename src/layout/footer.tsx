@@ -54,13 +54,15 @@ const Footer = () => {
         <nav role="navigation" aria-label="Footer navigation">
           <ul className="flex flex-col gap-3 text-sm">
             {navOptions.map((option) => (
-              <Link
-                to={option.link}
-                key={option.name}
-                className="hover:underline"
-              >
-                {option.name}
-              </Link>
+              <li key={option.name}>
+                <Link
+                  to={option.link}
+                  key={option.name}
+                  className="hover:underline"
+                >
+                  {option.name}
+                </Link>
+              </li>
             ))}
           </ul>
         </nav>

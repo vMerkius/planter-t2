@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { contactInfo } from "../../constants/contact-data";
+import { contactInfo } from "../../constants/contact";
 import contactImg from "/assets/images/contact.webp";
 import facebookIcon from "/assets/images/facebook.svg";
 import Label from "../UI/label";
