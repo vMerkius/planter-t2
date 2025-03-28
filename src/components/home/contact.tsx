@@ -119,13 +119,16 @@ const Contact = () => {
                 onChange={(e) =>
                   setForm({ ...form, phoneNumber: e.target.value })
                 }
-                placeholder="0"
+                placeholder="+38 012 102 402"
                 className="w-full"
               />
             </div>
           </div>
 
-          <div className="flex gap-10">
+          <fieldset className="flex gap-10" aria-labelledby="profession-label">
+            <legend id="profession-label" className="sr-only">
+              Select your profession
+            </legend>
             {proffesionsData.map((option) => {
               return (
                 <div className="flex gap-2 items-center" key={option}>
@@ -148,7 +151,7 @@ const Contact = () => {
                 </div>
               );
             })}
-          </div>
+          </fieldset>
 
           <div className="flex justify-between gap-6">
             <div className="flex flex-col gap-2 flex-1/2">
@@ -161,38 +164,47 @@ const Contact = () => {
                 cols={50}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
-                placehorder="message"
+                placeholder="message"
                 className="w-full rounded-sm "
               />
             </div>
           </div>
-          <div className="flex gap-10">
-            <div className="flex gap-4 items-center">
-              <input
-                type="checkbox"
-                id="term1"
-                checked={form.term1}
-                onChange={(e) => setForm({ ...form, term1: e.target.checked })}
-                className="accent-[#3A6150] hover:cursor-pointer"
-              />
-              <Label htmlFor="term1" className="text-sm hover:cursor-pointer">
-                Accept the Terms
-              </Label>
-            </div>
+          <fieldset className="flex gap-10" aria-labelledby="consents-label">
+            <legend id="consents-label" className="sr-only">
+              Consent options
+            </legend>
+            <div className="flex gap-10">
+              <div className="flex gap-4 items-center">
+                <input
+                  type="checkbox"
+                  id="term1"
+                  checked={form.term1}
+                  onChange={(e) =>
+                    setForm({ ...form, term1: e.target.checked })
+                  }
+                  className="accent-[#3A6150] hover:cursor-pointer"
+                />
+                <Label htmlFor="term1" className="text-sm hover:cursor-pointer">
+                  Accept the Terms
+                </Label>
+              </div>
 
-            <div className="flex gap-2 items-center">
-              <input
-                type="checkbox"
-                id="term2"
-                checked={form.term2}
-                onChange={(e) => setForm({ ...form, term2: e.target.checked })}
-                className="accent-[#3A6150] hover:cursor-pointer"
-              />
-              <Label htmlFor="term2" className="text-sm hover:cursor-pointer">
-                Accept the Terms 2
-              </Label>
+              <div className="flex gap-2 items-center">
+                <input
+                  type="checkbox"
+                  id="term2"
+                  checked={form.term2}
+                  onChange={(e) =>
+                    setForm({ ...form, term2: e.target.checked })
+                  }
+                  className="accent-[#3A6150] hover:cursor-pointer"
+                />
+                <Label htmlFor="term2" className="text-sm hover:cursor-pointer">
+                  Accept the Terms 2
+                </Label>
+              </div>
             </div>
-          </div>
+          </fieldset>
 
           <GreenButton className="min-w-40 h-12 mt-4 ml-auto">
             <span className="text-white text-sm">Send Message</span>

@@ -12,7 +12,11 @@ const Label: React.FC<LabelProps> = ({
   className = "",
 }) => {
   return (
-    <label htmlFor={htmlFor} className={`text-sm ${className}`}>
+    <label
+      htmlFor={htmlFor}
+      className={`text-sm ${className}`}
+      aria-required={isRequired}
+    >
       {isRequired && <span className="text-red-500 mr-1">*</span>}
       {children}
     </label>

@@ -1,17 +1,15 @@
 type InputWithoutBorderProps = React.InputHTMLAttributes<HTMLInputElement> & {
-  placehorder: string;
+  className?: string;
 };
 
 const InputWithoutBorder: React.FC<InputWithoutBorderProps> = ({
-  placehorder,
   className = "",
   ...props
 }) => {
   return (
     <input
       {...props}
-      placeholder={placehorder}
-      className={`bg-transparent border-b-1 border-[#111] ${className}`}
+      className={`bg-transparent border-b border-[#111] ${className}`}
     />
   );
 };

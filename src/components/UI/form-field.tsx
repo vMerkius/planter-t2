@@ -17,10 +17,16 @@ const FormField: React.FC<FormFieldProps> = ({
 }) => {
   return (
     <>
-      <Label htmlFor={id} className="text-sm" isRequired>
+      <Label htmlFor={id} className="text-sm" isRequired={isRequired}>
         {name}
       </Label>
-      <Input id={id} className={`w-full rounded-sm ${className}`} {...props} />
+      <Input
+        id={id}
+        className={`w-full rounded-sm ${className}`}
+        required={isRequired}
+        aria-required={isRequired}
+        {...props}
+      />
     </>
   );
 };

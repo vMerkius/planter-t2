@@ -5,7 +5,7 @@ type GreenButtonProps = {
 
 const GreenButton: React.FC<GreenButtonProps> = ({
   children,
-  className,
+  className = "",
   ...props
 }) => {
   return (
