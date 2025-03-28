@@ -1,5 +1,5 @@
 import GreenButton from "../UI/btn-green";
-import heroImg from "/assets/images/hero.png";
+import heroImg from "/assets/images/hero.webp";
 
 const Hero = () => {
   return (
@@ -29,7 +29,12 @@ const Hero = () => {
         </GreenButton>
       </div>
 
-      <img src={heroImg} alt="" aria-hidden="true" className="flex-1" />
+      <img
+        src={heroImg}
+        alt=""
+        aria-hidden="true"
+        className="aspect-square max-w-[37.5rem] h-auto object-contain"
+      />
     </section>
   );
 };

@@ -38,7 +38,12 @@ const Header = () => {
                 className="flex items-center gap-2"
               >
                 <span>Eng</span>
-                <img src={arrowDownIcon} alt="" aria-hidden="true" />
+                <img
+                  src={arrowDownIcon}
+                  alt=""
+                  aria-hidden="true"
+                  className="w-6 h-6"
+                />
               </button>
             </li>
           </ul>

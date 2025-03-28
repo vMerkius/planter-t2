@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { contactInfo } from "../../constants/contact-data";
-import contactImg from "/assets/images/contact.png";
+import contactImg from "/assets/images/contact.webp";
 import facebookIcon from "/assets/images/facebook.svg";
 import Label from "../UI/label";
 import Textarea from "../UI/textarea";
@@ -52,16 +52,16 @@ const Contact = () => {
             {contactInfo.map((info) => {
               return (
                 <div className="flex gap-8 items-center" key={info}>
-                  <img src={facebookIcon} alt="facebook" />
+                  <img src={facebookIcon} alt="facebook" className="w-6 h-6" />
                   <p className="text-sm">{info}</p>
                 </div>
               );
             })}
           </div>
           <div className="mt-auto flex gap-8">
-            <img src={facebookIcon} alt="facebook" />
-            <img src={facebookIcon} alt="facebook" />
-            <img src={facebookIcon} alt="facebook" />
+            <img src={facebookIcon} alt="facebook" className="w-8 h-8" />
+            <img src={facebookIcon} alt="facebook" className="w-8 h-8" />
+            <img src={facebookIcon} alt="facebook" className="w-8 h-8" />
           </div>
         </div>
         <form

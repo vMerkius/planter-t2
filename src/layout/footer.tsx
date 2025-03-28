@@ -3,8 +3,8 @@ import GreenButton from "../components/UI/btn-green";
 import InputWithoutBorder from "../components/UI/input-without-border";
 import { navOptions } from "../constants/nav-options";
 import HorizontalLine from "../components/UI/horizontal-line";
-import mastercardImg from "/assets/images/mastercard.png";
-import visaImg from "/assets/images/visa.png";
+import mastercardImg from "/assets/images/mastercard.webp";
+import visaImg from "/assets/images/visa.webp";
 import { useState } from "react";
 
 const Footer = () => {
@@ -81,11 +81,15 @@ const Footer = () => {
             plantme.store@gmail.com
           </a>
           <div className="flex gap-4 items-center mt-4">
-            <img src={visaImg} alt="Visa logo" className="h-6 w-auto" />
+            <img
+              src={visaImg}
+              alt="Visa logo"
+              className="aspect-[50/29] w-10"
+            />
             <img
               src={mastercardImg}
               alt="Mastercard logo"
-              className="h-10 w-auto"
+              className="aspect-[50/42] w-10"
             />
           </div>
         </div>
@@ -95,7 +99,7 @@ const Footer = () => {
         <p className="text-center w-full">
           © 2022 PlantMe. All rights reserved.
         </p>
-        <ul className="flex items-center gap-6 text-nowrap text-gray-400 absolute right-0">
+        <ul className="flex items-center gap-6 text-nowrap text-gray-600 absolute right-0">
           <li>
             <Link className="hover:underline" to="/privacy-policy">
               Privacy Policy

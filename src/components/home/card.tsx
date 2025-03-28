@@ -13,7 +13,7 @@ const Card: React.FC<CardProps> = ({ img, title, description }) => {
         src={img}
         alt=""
         aria-hidden="true"
-        className="h-48 w-auto object-cover "
+        className="aspect-[230/180] max-w-36 object-cover"
       />
       <div className="text-white flex flex-col gap-4 justify-between max-w-[25rem]">
         <h3 className="text-lg font-semibold ">{title}</h3>
